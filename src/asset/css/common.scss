@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+/* reset Style */
+* {padding: 0; margin: 0; font-family: 'Pretendard-Regular', sans-serif;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'KoPubWorldDotum', sans-serif;
+}
+
+body {
+    line-height: 1;
+    font-size: 1.6rem;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+/* reset Style */
+
+/* contents */
+#wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+}
+
+.hidden {
+    font-size: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.inner {
+    position: relative;
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.tab-wrap{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+            width: 50%;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+section {
+    text-align: center;
+
+    &.section01 {
+        padding-top: 227px;
+        height: 1619px;
+        background: url('../images/section-bg-1.jpg') no-repeat center / 1920px 1619px;
+
+        h2 {margin-bottom: 53px;}
+    }
+
+    &.section02 {
+        padding-top: 80px;
+        height: 906px;
+        background: url('../images/section-bg-2.jpg') no-repeat center / 1920px 906px;
+
+        .card-list {
+            display: flex;
+            margin: 39px 0 34px;
+            padding: 0 65px;
+            justify-content: space-between;
+
+            li {
+                width: 270px;
+                height: 480px;
+                border-radius: 10px;
+                border: 3px solid #1c1517;
+                background: #e7e7e7 url('../images/k-milk-mark.png') no-repeat center;
+            }
+        }
+    }
+
+    &.section03 {
+        padding-top: 80px;
+        background: url('../images/section-bg-3.jpg') no-repeat center / 1920px 1364px;
+        height: 1364px;
+
+        h2 {
+            margin-bottom: 39px;
+        }
+
+        .event-list {
+            padding: 0 65px;
+
+            li {
+                display: flex;
+                height: 221px;
+                margin-bottom: 62px;
+                align-items: center;
+                text-align: left;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .icon {
+                    margin-right: 43px;
+                }
+            }
+        }
+    }
+
+    &.section04 {
+        padding-top: 82px;
+        height: 1289px;
+        background: url('../images/section-bg-4.jpg') no-repeat center / 1920px 1289px;
+
+        h2 {
+            margin-bottom: 36px;
+        }
+
+        .gift-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                width: 50%;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    &.section05 {
+        height: 935px;
+        padding-top: 80px;
+        font-family: 'Pretendard-Medium', sans-serif;
+        text-align: left;
+        color: #fff;
+        background: url('../images/section-bg-5.jpg') no-repeat center / 1920px 935px;
+
+        h2 {
+            padding: 0 65px;
+            margin-bottom: 30px;
+            font-family: 'Pretendard-Bold', sans-serif;
+            font-size: 4rem;
+        }
+
+        .notice-list {
+            padding: 0 65px;
+
+            li {
+                position: relative;
+                padding-left: 20px;
+                font-size: 3.6rem;
+                line-height: 46px;
+                letter-spacing: -2px;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    left: 0;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                }
+            }
+        }
+
+        .sns-list {
+            display: flex;
+            justify-content: center;
+            margin-top: 45px;
+
+            li {
+                margin: 0 27px;
+            }
+        }
+    }
+}
+
