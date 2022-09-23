@@ -81,7 +81,11 @@ a {
     margin: 0 auto;
     width: 100%;
     max-width: 1920px;
+    overflow: hidden;
 }
+
+.pc {display: block;}
+.mob {display: none;}
 
 .hidden {
     font-size: 0;
@@ -99,7 +103,9 @@ a {
     position: absolute;
     top: 0;
     left: 50%;
+    width: 100%;
     transform: translateX(-50%);
+    z-index: 10;
 
     ul {
         display: flex;
@@ -119,97 +125,37 @@ a {
 section {
     text-align: center;
 
-    &.section01 {
-        padding-top: 227px;
-        height: 1619px;
-        background: url('../images/section-bg-1.jpg') no-repeat center / 1920px 1619px;
-
-        h2 {margin-bottom: 53px;}
+    .section-bg {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    &.section02 {
-        padding-top: 80px;
-        height: 906px;
-        background: url('../images/section-bg-2.jpg') no-repeat center / 1920px 906px;
+    h2 {
+        max-width: 486px;
+        width: 80%;
+        margin: 0 auto;
 
-        .card-list {
-            display: flex;
-            margin: 39px 0 34px;
-            padding: 0 65px;
-            justify-content: space-between;
-
-            li {
-                width: 270px;
-                height: 480px;
-                border-radius: 10px;
-                border: 3px solid #1c1517;
-                background: #e7e7e7 url('../images/k-milk-mark.png') no-repeat center;
-            }
-        }
+        img {width: 100%;}
     }
 
-    &.section03 {
-        padding-top: 80px;
-        background: url('../images/section-bg-3.jpg') no-repeat center / 1920px 1364px;
-        height: 1364px;
-
-        h2 {
-            margin-bottom: 39px;
-        }
-
-        .event-list {
+    .inner {
+        > div {
             padding: 0 65px;
 
-            li {
-                display: flex;
-                height: 221px;
-                margin-bottom: 62px;
-                align-items: center;
-                text-align: left;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-
-                .icon {
-                    margin-right: 43px;
-                }
-            }
+            img {width: 100%;}
         }
     }
 
-    &.section04 {
-        padding-top: 82px;
-        height: 1289px;
-        background: url('../images/section-bg-4.jpg') no-repeat center / 1920px 1289px;
-
-        h2 {
-            margin-bottom: 36px;
-        }
-
-        .gift-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
-            li {
-                width: 50%;
-                margin-bottom: 50px;
-            }
-        }
-    }
-
-    &.section05 {
-        height: 935px;
-        padding-top: 80px;
+    &.notice {
+        padding: 80px 0 56px;
         font-family: 'Pretendard-Medium', sans-serif;
         text-align: left;
-        color: #fff;
-        background: url('../images/section-bg-5.jpg') no-repeat center / 1920px 935px;
 
         h2 {
+            width: 100%;
+            margin: 0 0 30px 0;
             padding: 0 65px;
-            margin-bottom: 30px;
             font-family: 'Pretendard-Bold', sans-serif;
             font-size: 4rem;
         }
@@ -233,20 +179,222 @@ section {
                     width: 8px;
                     height: 8px;
                     border-radius: 50%;
-                    background-color: #fff;
                 }
             }
         }
 
         .sns-list {
             display: flex;
-            justify-content: center;
-            margin-top: 45px;
+            width: 80%;
+            max-width: 570px;
+            margin: 45px auto 0;
+            justify-content: space-between;
+
+            img {width: 100%;}
+        }
+    }
+
+    &.section02 {
+        padding: 80px 0;
+        background: url('../images/section-bg-2.jpg') no-repeat center / 1920px 100%;
+
+        .card-list {
+            display: flex;
+            margin: 39px 0 34px;
+            padding: 0 65px;
+            justify-content: space-between;
 
             li {
-                margin: 0 27px;
+                width: 28.5%;
+                height: 480px;
+                border-radius: 10px;
+                border: 3px solid #1c1517;
+                background: #e7e7e7 url('../images/k-milk-mark.png') no-repeat center;
+            }
+        }
+
+        input[type='image'] {
+            max-width: 272px;
+            width: 80%;
+        }
+    }
+
+    &.section03 {
+        padding: 80px 0 68px;
+        background: url('../images/section-bg-3.jpg') center / 1920px 100%;
+
+        h2 {
+            margin-bottom: 39px;
+        }
+
+        > div {
+            max-width: 926px;
+        }
+    }
+
+    &.section04 {
+        padding: 82px 0 148px;
+        background: url('../images/section-bg-4.jpg') no-repeat center / 1920px 100%;
+
+        h2 {
+            margin-bottom: 36px;
+        }
+
+        > div {
+            max-width: 900px;
+        }
+    }
+
+    &.section05 {
+        color: #fff;
+        background: url('../images/section-bg-5.jpg') no-repeat center / 1920px 100%;
+
+        .notice-list {
+            li {
+                color: #fff;
+
+                &:before {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    &.section06 {
+        z-index: 10;
+    }
+
+    &.section07 {
+        margin-top: -406px;
+        padding: 243px 0 149px;
+        height: 956px;
+        background: url('../images/section-bg-7.png') no-repeat center / 1920px 956px;
+        z-index: -1;
+
+        h2 {
+            max-width: 306px;
+            margin-bottom: 88px;
+        }
+    }
+
+    &.section08 {
+        margin-top: -127px;
+        padding: 217px 0 225px;
+        height: 1216px;
+        background: url('../images/section-bg-8.png') no-repeat center / 1920px 1216px;
+
+        h2 {
+            margin-bottom: 67px;
+            max-width: 261px;
+        }
+    }
+
+    &.section09 {
+        margin-top: -190px;
+        padding: 291px 0 160px;
+        height: 976px;
+        background: url('../images/section-bg-9.png') no-repeat center / 1920px 976px;
+        z-index: -1;
+
+        h2 {
+            margin-bottom: 61px;
+            max-width: 217px;
+        }
+    }
+
+    &.section10 {
+        margin-top: -165px;
+        padding: 263px 0 115px;
+        background: url('../images/section-bg-10.png') no-repeat top / 1920px auto;
+
+        .notice-list {
+            li {
+                color: #282828;
+
+                &:before {
+                    background-color: #282828;
+                }
             }
         }
     }
 }
 
+@media screen and (max-width: 1079px){
+    .pc {display: none;}
+    .mob {display: block;}
+
+    .inner {
+        width: 100%;
+    }
+
+    section {
+        .inner {
+            > div {
+                width: 80%;
+                padding: 0;
+                margin: 0 auto;
+            }
+        }
+
+        &.section07, &.section08, &.section09 {
+            position: relative;
+            padding: 0;
+
+            .inner {
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .section-bg {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 570px){
+    section {
+        &.notice {
+            h2 {
+                font-size: 3rem;
+                padding: 0 30px;
+            }
+
+            .notice-list {
+                padding: 0;
+                margin: 0 auto;
+                width: 80%;
+
+                li {
+                    font-size: 2rem;
+                    line-height: 30px;
+
+                    &:before {
+                        top: 12px;
+                    }
+                }
+            }
+            .sns-list {
+                li {
+                    width: 20%;
+                }
+            }
+        }
+
+        &.section02 {
+            .card-list {
+                padding: 0;
+                margin: 39px auto 34px;
+                width: 80%;
+            }
+        }
+
+        &.section07, &.section08, &.section09 {
+            .inner {
+                top: 60%;
+            }
+        }
+    }
+}

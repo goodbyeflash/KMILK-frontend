@@ -1,3 +1,5 @@
+import '../asset/css/common.scss'
+
 // 메시지 수신 받는 eventListener 등록
 window.addEventListener('message', receiveMsgFromChild);
 
