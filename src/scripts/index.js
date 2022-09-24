@@ -1,1 +1,1 @@
-window.location.href = 'event2.html';
+window.location.href = './pages/event1.html';

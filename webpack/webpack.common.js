@@ -8,7 +8,7 @@ const htmlPageNames = ['event1', 'event2'];
 const multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
     template: Path.resolve(__dirname, `../src/pages/${name}.html`), // relative path to the HTML files
-    filename: `${name}.html`, // output HTML files
+    filename: `pages/${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
   });
 });
@@ -22,6 +22,7 @@ module.exports = {
   output: {
     path: Path.join(__dirname, '../build'),
     filename: 'js/[name].js',
+    assetModuleFilename : 'asset/images/[name].[ext]'
   },
   optimization: {
     splitChunks: {
@@ -57,7 +58,7 @@ module.exports = {
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        type: 'asset',
+        type : 'asset/resource'
       },
     ],
   },
