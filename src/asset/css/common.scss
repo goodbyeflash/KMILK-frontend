@@ -81,11 +81,7 @@ a {
     margin: 0 auto;
     width: 100%;
     max-width: 1920px;
-    overflow: hidden;
 }
-
-.pc {display: block;}
-.mob {display: none;}
 
 .hidden {
     font-size: 0;
@@ -97,15 +93,18 @@ a {
     position: relative;
     width: 1080px;
     margin: 0 auto;
+
+    > div {
+        padding: 0 65px;
+    }
 }
 
 .tab-wrap{
     position: absolute;
     top: 0;
     left: 50%;
-    width: 100%;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: 100;
 
     ul {
         display: flex;
@@ -122,291 +121,235 @@ a {
     }
 }
 
-section {
-    text-align: center;
 
-    .section-bg {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.section05 {
+    height: 935px;
+    padding-top: 80px;
+    font-family: 'Pretendard-Medium', sans-serif;
+    text-align: left;
+    background: url('../images/section-bg-5.jpg') no-repeat center / 1920px 935px;
 
     h2 {
-        max-width: 486px;
-        width: 80%;
-        margin: 0 auto;
-
-        img {width: 100%;}
+        padding: 0 65px;
+        margin-bottom: 30px;
+        font-family: 'Pretendard-Bold', sans-serif;
+        font-size: 4rem;
+        text-align: left !important;
     }
 
-    .inner {
-        > div {
-            padding: 0 65px;
+    .notice-list {
+        padding: 0 65px;
 
-            img {width: 100%;}
-        }
-    }
-
-    &.notice {
-        padding: 80px 0 56px;
-        font-family: 'Pretendard-Medium', sans-serif;
-        text-align: left;
-
-        h2 {
-            width: 100%;
-            margin: 0 0 30px 0;
-            padding: 0 65px;
-            font-family: 'Pretendard-Bold', sans-serif;
-            font-size: 4rem;
-        }
-
-        .notice-list {
-            padding: 0 65px;
-
-            li {
-                position: relative;
-                padding-left: 20px;
-                font-size: 3.6rem;
-                line-height: 46px;
-                letter-spacing: -2px;
-
-                &:before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    top: 20px;
-                    left: 0;
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                }
-            }
-        }
-
-        .sns-list {
-            display: flex;
-            width: 80%;
-            max-width: 570px;
-            margin: 45px auto 0;
-            justify-content: space-between;
-
-            img {width: 100%;}
-        }
-    }
-
-    &.section02 {
-        padding: 80px 0;
-        background: url('../images/section-bg-2.jpg') no-repeat center / 1920px 100%;
-
-        .card-list {
-            display: flex;
-            margin: 39px 0 34px;
-            padding: 0 65px;
-            justify-content: space-between;
-
-            li {
-                width: 28.5%;
-                height: 480px;
-                border-radius: 10px;
-                border: 3px solid #1c1517;
-                background: #e7e7e7 url('../images/k-milk-mark.png') no-repeat center;
-            }
-        }
-
-        input[type='image'] {
-            max-width: 272px;
-            width: 80%;
-        }
-    }
-
-    &.section03 {
-        padding: 80px 0 68px;
-        background: url('../images/section-bg-3.jpg') center / 1920px 100%;
-
-        h2 {
-            margin-bottom: 39px;
-        }
-
-        > div {
-            max-width: 926px;
-        }
-    }
-
-    &.section04 {
-        padding: 82px 0 148px;
-        background: url('../images/section-bg-4.jpg') no-repeat center / 1920px 100%;
-
-        h2 {
-            margin-bottom: 36px;
-        }
-
-        > div {
-            max-width: 900px;
-        }
-    }
-
-    &.section05 {
-        color: #fff;
-        background: url('../images/section-bg-5.jpg') no-repeat center / 1920px 100%;
-
-        .notice-list {
-            li {
-                color: #fff;
-
-                &:before {
-                    background-color: #fff;
-                }
-            }
-        }
-    }
-
-    &.section06 {
-        z-index: 10;
-    }
-
-    &.section07 {
-        margin-top: -406px;
-        padding: 243px 0 149px;
-        height: 956px;
-        background: url('../images/section-bg-7.png') no-repeat center / 1920px 956px;
-        z-index: -1;
-
-        h2 {
-            max-width: 306px;
-            margin-bottom: 88px;
-        }
-    }
-
-    &.section08 {
-        margin-top: -127px;
-        padding: 217px 0 225px;
-        height: 1216px;
-        background: url('../images/section-bg-8.png') no-repeat center / 1920px 1216px;
-
-        h2 {
-            margin-bottom: 67px;
-            max-width: 261px;
-        }
-    }
-
-    &.section09 {
-        margin-top: -190px;
-        padding: 291px 0 160px;
-        height: 976px;
-        background: url('../images/section-bg-9.png') no-repeat center / 1920px 976px;
-        z-index: -1;
-
-        h2 {
-            margin-bottom: 61px;
-            max-width: 217px;
-        }
-    }
-
-    &.section10 {
-        margin-top: -165px;
-        padding: 263px 0 115px;
-        background: url('../images/section-bg-10.png') no-repeat top / 1920px auto;
-
-        .notice-list {
-            li {
-                color: #282828;
-
-                &:before {
-                    background-color: #282828;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1079px){
-    .pc {display: none;}
-    .mob {display: block;}
-
-    .inner {
-        width: 100%;
-    }
-
-    section {
-        .inner {
-            > div {
-                width: 90%;
-                padding: 0;
-                margin: 0 auto;
-            }
-        }
-
-        &.section07 {
+        li {
             position: relative;
-            padding: 0;
+            padding-left: 20px;
+            font-size: 3.6rem;
+            line-height: 42px;
+            text-align: left;
+            letter-spacing: -2px;
 
-            .inner {
+            &:before {
+                content: '';
+                display: block;
                 position: absolute;
-                top: 55%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                top: 18px;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
             }
-        }
-
-        &.section08 {
-            margin-top: -185px
-        }
-
-        &.section09 {
-            margin-top: -320px
-        }
-
-        &.section10 {
-            margin-top: -430px
         }
     }
 
-    .section-bg {
-        width: 100%;
+    .sns-list {
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+
+        li {
+            margin: 0 27px;
+        }
     }
 }
 
-@media screen and (max-width: 570px){
+.event1 {
     section {
-        &.notice {
-            h2 {
-                font-size: 3rem;
-                padding: 0 30px;
-            }
+        text-align: center;
 
-            .notice-list {
-                padding: 0;
-                margin: 0 auto;
-                width: 80%;
+        &.section01 {
+            padding-top: 227px;
+            height: 1619px;
+            background: url('../images/section-bg-1.jpg') no-repeat center / 1920px 1619px;
 
-                li {
-                    font-size: 2rem;
-                    line-height: 30px;
-
-                    &:before {
-                        top: 12px;
-                    }
-                }
-            }
-            .sns-list {
-                li {
-                    width: 20%;
-                }
-            }
+            h2 {margin-bottom: 53px;}
         }
 
         &.section02 {
+            padding-top: 80px;
+            height: 906px;
+            background: url('../images/section-bg-2.jpg') no-repeat center / 1920px 906px;
+
             .card-list {
-                padding: 0;
-                margin: 39px auto 34px;
-                width: 80%;
+                display: flex;
+                margin: 39px 0 34px;
+                padding: 0 65px;
+                justify-content: space-between;
+
+                li {
+                    width: 270px;
+                    height: 480px;
+                    border-radius: 10px;
+                    border: 3px solid #1c1517;
+                    background: #e7e7e7 url('../images/k-milk-mark.png') no-repeat center;
+                }
             }
         }
 
-        &.section07 {
-            .inner {
-                top: 60%;
+        &.section03 {
+            padding-top: 80px;
+            background: url('../images/section-bg-3.jpg') no-repeat center / 1920px 1364px;
+            height: 1364px;
+
+            h2 {
+                margin-bottom: 39px;
+            }
+
+            .event-list {
+                padding: 0 65px;
+
+                li {
+                    display: flex;
+                    height: 221px;
+                    margin-bottom: 62px;
+                    align-items: center;
+                    text-align: left;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .icon {
+                        margin-right: 43px;
+                    }
+                }
+            }
+        }
+
+        &.section04 {
+            padding-top: 82px;
+            height: 1289px;
+            background: url('../images/section-bg-4.jpg') no-repeat center / 1920px 1289px;
+
+            h2 {
+                margin-bottom: 36px;
+            }
+
+            .gift-list {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 0 65px;
+
+                li {
+                    width: 50%;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        &.section05 {
+            height: 935px;
+            padding-top: 80px;
+            color: #fff;
+            background: url('../images/section-bg-5.jpg') no-repeat center / 1920px 935px;
+
+            .notice-list {
+                li {
+                    &:before {
+                        background-color: #fff;
+                    }
+                }
             }
         }
     }
 }
+
+.event2 {
+    section {
+        position: relative;
+
+        h2 {text-align: center;}
+
+        &.section01 {
+            height: 1510px;
+            background: url('../images/section-bg-6.png') no-repeat top / 1920px 1510px;
+        }
+
+        &.section02 {
+            margin-top: -403px;
+            padding: 242px 0 150px;
+            height: 956px;
+            background: url('../images/section-bg-7.png') no-repeat top / 1920px 956px;
+            z-index: -1;
+        }
+
+        &.section03 {
+            margin-top: -118px;
+            padding: 208px 0 223px;
+            height: 1123px;
+            background: url('../images/section-bg-8.png') no-repeat top / 1920px 1123px;
+
+            h2 {margin-bottom: 68px;}
+
+            .quiz {
+                display: block;
+                position: relative;
+                padding: 18px;
+                margin: 0 auto;
+                width: 950px;
+                height: 577px;
+                background-color: #fff;
+
+                iframe {border: 2px solid #251d1b;}
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: -60px;
+                    right: -30px;
+                    width: 128px;
+                    height: 153px;
+                    background: url('../images/icon-milk.png') no-repeat center;
+                }
+            }
+        }
+
+        &.section04 {
+            margin-top: -175px;
+            padding: 288px 0 159px;
+            height: 976px;
+            background: url('../images/section-bg-9.png') no-repeat top / 1920px 976px;
+            text-align: center;
+
+            h2 {margin-bottom: 62px;}
+        }
+
+        &.section05 {
+            margin-top: -167px;
+            padding: 263px 0 105px;
+            height: 983px;
+            background: url('../images/section-bg-10.png') no-repeat top / 1920px 983px;
+
+            .notice-list {
+                li {
+                    &:before {
+                        background-color: #282828;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

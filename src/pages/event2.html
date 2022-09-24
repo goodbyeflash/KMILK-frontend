@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="viewport" content="width=1080" />
     <title>K-MILK</title>
     <style>
       * {
@@ -18,7 +18,7 @@
     <script src="../scripts/event2.js"></script>
   </head>
   <body>
-    <div id="wrap">
+    <div id="wrap" class="event2">
       <h1 class="hidden">K-MILK EVENT</h1>
       <div class="tab-wrap">
         <div class="inner">
@@ -29,35 +29,36 @@
         </div>
       </div>
 
-      <section class="section06">
+      <section class="section01">
         <div class="inner">
-          <img src="../asset/images/section-bg-6.png" class="section-bg pc" alt="">
-          <img src="../asset/images/section-bg-6-m.png" class="section-bg mob" alt="">
+          <div class="hidden">
+            <h2>맛있는 우리우유 OX퀴즈 이벤트</h2>
+            <span>2022.10.05 ~ 2022.10.31</span>
+          </div>
         </div>
       </section>
 
-      <section class="section07">
+      <section class="section02">
         <div class="inner">
-          <h2><img src="../asset/images/section-tit-7.png" alt="이벤트 참여방법"></h2>
-          <div><img src="../asset/images/process-2.png" alt=""></div>
+          <div><img src="../asset/images/join-event.png" alt="이벤트 참여 방법. STEP1. OX퀴즈를 풀어주세요! STEP2. 채점하기 버튼을 눌러 채점을 받아보세요! STEP3. 퀴즈 만점자라면? 개인정보 입력 후 경품에 응모할 수 있어요!"></div>
         </div>
       </section>
 
-      <section class="section08">
+      <section class="section03">
         <div class="inner">
-          <h2><img src="../asset/images/section-tit-8.png" alt="퀴즈 참여방법"></h2>
-          <div><iframe width="100%" height="557" src="../../public/index.html"></iframe></div>
+          <h2><img src="../asset/images/section-tit-5.png" alt=""></h2>
+          <div class="quiz"><iframe width="910" height="537" src="../../public/index.html"></iframe></div>
         </div>
       </section>
 
-      <section class="section09">
+      <section class="section04">
         <div class="inner">
-          <h2><img src="../asset/images/section-tit-9.png" alt="이벤트 경품"></h2>
-          <div><img src="../asset/images/section09-txt.png" alt=""></div>
+          <h2><img src="../asset/images/section-tit-6.png" alt=""></h2>
+          <div><img src="../asset/images/gift-5.png" alt=""></div>
         </div>
       </section>
 
-      <section class="section10 notice">
+      <section class="section05">
         <div class="inner">
           <h2>이벤트 주의사항</h2>
           <ul class="notice-list">
@@ -87,7 +88,101 @@
           </ul>
         </div>
       </section>
+    </div>
 
+    <!-- (공통) 당첨자 발표 팝업-->
+    <div class="popup active" id="popup01">
+      <div class="dim"></div>
+      <div class="popup-contents">
+        <div class="winner">
+          <p><img src="../asset/images/popup-txt-1.png" alt="기다리고 기다렸던 당첨자 발표시간! 우유자조금관리위원회 홈페이지에서 확인해보세요!"></p>
+          <div class="form-btn">
+            <input type="image" src="../asset/images/popup-btn-1.png" title="당첨자 확인하러 가기">
+          </div>
+        </div>
+
+        <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
+      </div>
+    </div>
+
+    <!-- 응모완료 팝업 -->
+    <div class="popup" id="popup02">
+      <div class="dim"></div>
+      <div class="popup-contents">
+        <div class="enter-alert">
+          <p><img src="../asset/images/popup-txt-3.png" alt="엄훠나!! 이미 응모가 되었어요!"></p>
+        </div>
+
+        <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
+      </div>
+    </div>
+
+    <!-- 만점자 응모 팝업 -->
+    <div class="popup" id="popup03">
+      <div class="dim"></div>
+      <div class="popup-contents">
+
+        <div class="form form02">
+          <p><img src="../asset/images/popup-txt-4.png" alt="와우 100점이닷! 경품에 응모해주세요>.<♥"></p>
+          <div class="form-group">
+            <label for="name">이&nbsp;&nbsp;&nbsp;&nbsp;름</label>
+            <input type="text" id="name">
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">연락처</label>
+            <input type="text" id="phoneNumber">
+          </div>
+
+
+          <div class="form-agree">
+            <div class="agreement">
+              <p>개인정보 수집 및 이용 동의에 대한 안내</p>
+
+              <p>
+                1. 개인정보 수집에 대한 동의<br>
+                우유자조금 온라인 이벤트의 운영을 위해 다음과 같이<br>
+                고객님의 개인정보를 수집/이용합니다.
+              </p>
+
+              <p>
+                2. 개인정보 수집 항목 :<br>
+                이름, 연락처
+              </p>
+
+              <p>
+                3. 수집된 정보는 이벤트 경품 발송 외에<br>
+                어떠한 용도로도 사용되지 않으며,<br>
+                이벤트 종료 후 60일 내 폐기됩니다.
+              </p>
+            </div>
+
+            <input type="checkbox" id="chk01">
+            <label for="chk01">개인 정보 수집 및 이용에 동의합니다.</label>
+          </div>
+
+          <div class="form-btn">
+            <input type="image" src="../asset/images/popup-btn-4.png" title="응모하기">
+          </div>
+        </div>
+
+        <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
+      </div>
+    </div>
+
+    <!-- 다시도전 팝업 -->
+    <div class="popup" id="popup04">
+      <div class="dim"></div>
+      <div class="popup-contents">
+        <div class="enter-again">
+          <p><img src="../asset/images/popup-txt-5.png" alt="엄훠나!! 이미 응모가 되었어요!"></p>
+
+          <div class="form-btn">
+            <input type="image" src="../asset/images/popup-btn-5.png" title="퀴즈 다시 풀어보러 가기">
+          </div>
+        </div>
+
+        <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
+      </div>
     </div>
   </body>
 </html>
