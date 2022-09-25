@@ -11,7 +11,7 @@
     <meta property="og:description" content="지금 바로 참여해보세요!">
     <title>2022 우유자조금관리위원회 온라인이벤트</title>
   </head>
-  <body>
+  <body style="display: none;">
     <div id="wrap" class="event1">
       <h1 class="hidden">K-MILK EVENT</h1>
       <div class="tab-wrap">
@@ -35,9 +35,9 @@
           <h2><img src="../asset/images/section-tit-2.png" alt="영상보기"></h2>
 
           <ul class="card-list">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li id="video01"></li>
+            <li id="video02"></li>
+            <li id="video03"></li>
           </ul>
 
           <input type="image" src="../asset/images/btn-receive.png" class="popup-open" data-target="#popup02" title="접수하기">
@@ -121,7 +121,7 @@
     </div>
 
     <!-- (공통) 당첨자 발표 팝업-->
-    <div class="popup active" id="popup01">
+    <div class="popup" id="popup01">
       <div class="dim"></div>
       <div class="popup-contents">
         <div class="winner">
@@ -142,17 +142,17 @@
         <div class="form">
           <div class="form-group">
             <label for="name">이름</label>
-            <input type="text" id="name">
+            <input type="text" id="name" maxlength="20">
           </div>
 
           <div class="form-group">
             <label for="phoneNumber">연락처</label>
-            <input type="text" id="phoneNumber">
+            <input type="text" id="phoneNumber" maxlength="11">
           </div>
 
           <div class="form-group">
             <label for="address">주소</label>
-            <input type="text" id="address">
+            <input type="text" id="address" maxlength="100">
           </div>
 
           <div class="form-group">
@@ -184,7 +184,7 @@
           </div>
 
           <div class="form-btn">
-            <input type="image" src="../asset/images/popup-btn-2.png" title="최종 접수하기">
+            <input id="sendButton" type="image" src="../asset/images/popup-btn-2.png" title="최종 접수하기">
           </div>
         </div>
 
@@ -203,8 +203,20 @@
           <input type="text" value="URLURLURLURLURLURLURLURLURLURL">
 
           <div class="form-btn">
-            <input type="image" src="../asset/images/popup-btn-3.png" title="영상리그램하러가기">
+            <input type="image" id="regram" src="../asset/images/popup-btn-3.png" title="영상리그램하러가기">
           </div>
+        </div>
+
+        <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
+      </div>
+    </div>
+
+    <!-- 응모완료 팝업 -->
+    <div class="popup" id="popup04">
+      <div class="dim"></div>
+      <div class="popup-contents">
+        <div class="enter-alert">
+          <p><img src="../asset/images/popup-txt-3.png" alt="엄훠나!! 이미 응모가 되었어요!"></p>
         </div>
 
         <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>

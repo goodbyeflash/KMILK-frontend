@@ -22,7 +22,7 @@
     </style>
     <script src="../scripts/event2.js"></script>
   </head>
-  <body>
+  <body style="display: none;">
     <div id="wrap" class="event2">
       <h1 class="hidden">K-MILK EVENT</h1>
       <div class="tab-wrap">
@@ -96,7 +96,7 @@
     </div>
 
     <!-- (공통) 당첨자 발표 팝업-->
-    <div class="popup active" id="popup01">
+    <div class="popup" id="popup01">
       <div class="dim"></div>
       <div class="popup-contents">
         <div class="winner">
@@ -104,18 +104,6 @@
           <div class="form-btn">
             <input type="image" src="../asset/images/popup-btn-1.png" title="당첨자 확인하러 가기">
           </div>
-        </div>
-
-        <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
-      </div>
-    </div>
-
-    <!-- 응모완료 팝업 -->
-    <div class="popup" id="popup02">
-      <div class="dim"></div>
-      <div class="popup-contents">
-        <div class="enter-alert">
-          <p><img src="../asset/images/popup-txt-3.png" alt="엄훠나!! 이미 응모가 되었어요!"></p>
         </div>
 
         <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
@@ -131,11 +119,11 @@
           <p><img src="../asset/images/popup-txt-4.png" alt="와우 100점이닷! 경품에 응모해주세요>.<♥"></p>
           <div class="form-group">
             <label for="name">이&nbsp;&nbsp;&nbsp;&nbsp;름</label>
-            <input type="text" id="name">
+            <input type="text" id="name" maxlength="20">
           </div>
           <div class="form-group">
             <label for="phoneNumber">연락처</label>
-            <input type="text" id="phoneNumber">
+            <input type="text" id="phoneNumber" maxlength="11">
           </div>
 
 
@@ -166,8 +154,20 @@
           </div>
 
           <div class="form-btn">
-            <input type="image" src="../asset/images/popup-btn-4.png" title="응모하기">
+            <input id="sendButton" type="image" src="../asset/images/popup-btn-4.png" title="응모하기">
           </div>
+        </div>
+
+        <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
+      </div>
+    </div>
+
+    <!-- 응모완료 팝업 -->
+    <div class="popup" id="popup02">
+      <div class="dim"></div>
+      <div class="popup-contents">
+        <div class="enter-alert">
+          <p><img src="../asset/images/popup-txt-3.png" alt="엄훠나!! 이미 응모가 되었어요!"></p>
         </div>
 
         <div class="popup-close"><img src="../asset/images/popup-close.png" alt="팝업닫기"></div>
@@ -179,10 +179,10 @@
       <div class="dim"></div>
       <div class="popup-contents">
         <div class="enter-again">
-          <p><img src="../asset/images/popup-txt-5.png" alt="엄훠나!! 이미 응모가 되었어요!"></p>
+          <p><img src="../asset/images/popup-txt-5.png" alt="공부가 더 필요해요! 다시 도전!"></p>
 
           <div class="form-btn">
-            <input type="image" src="../asset/images/popup-btn-5.png" title="퀴즈 다시 풀어보러 가기">
+            <input id="replay" type="image" src="../asset/images/popup-btn-5.png" title="퀴즈 다시 풀어보러 가기">
           </div>
         </div>
 
