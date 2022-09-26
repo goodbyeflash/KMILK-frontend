@@ -1,15 +1,34 @@
-import '../asset/css/login.scss'
+import '../asset/css/login.scss';
+import api from './lib/api';
 
-import '../scripts/lib/jquery.min'
-
-// 메시지 수신 받는 eventListener 등록
-window.addEventListener('message', receiveMsgFromChild);
-
-// 자식으로부터 메시지 수신
-function receiveMsgFromChild(e) {
-    if (e.data == 6) {
-        //Todo..만점자 응모 팝업
-    } else {
-        //Todo.. 퀴즈 다시 풀어보러 가기
-    }
-}
+window.onload = () => {
+  api('get', 'admin/check', undefined, (res) => {
+    if (res) {
+      if (res.result.data && res.result.data.id) {
+        location.href = 'admin-event1.html';
+      } else {
+        document.getElementsByTagName('body')[0].style.display = 'block';
+        document.getElementsByClassName('btn btn-primary')[0].onclick = () => {
+          api(
+            'post',
+            'admin/login',
+            {
+              id: document.getElementById('userId').value,
+              password: document.getElementById('userPw').value,
+            },
+            (res) => {
+              if (res) {
+                if (res.msg == 'ERROR') {
+                  document.getElementById('message').innerText =
+                    '아이디와 비밀번호를 확인해주세요.';
+                } else {
+                  location.href = 'admin-event1.html';
+                }
+              }
+            }
+          );
+        };        
+      }
+    }    
+  });
+};

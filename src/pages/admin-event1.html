@@ -7,13 +7,13 @@
   <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
   <title>관리자 페이지 | EVENT1</title>
 </head>
-<body>
+<body style="display: none;">
 <div id="wrap">
   <header>
     <div class="header-top">
       <h1>ADMINISTRATOR</h1>
       <ul>
-        <li id="logout"><a>로그아웃</a></li>
+        <li id="logout" style="cursor: pointer;"><a>로그아웃</a></li>
       </ul>
     </div>
 
@@ -21,7 +21,7 @@
       <nav>
         <ul>
           <li class="current"><span class="dep01">EVENT1</span></li>
-          <li><span class="dep01">EVENT2</span></li>
+          <li><a href="./admin-event2.html"><span class="dep01">EVENT2</span></a></li>
         </ul>
       </nav>
     </div>
@@ -34,9 +34,7 @@
         <h2>EVENT1</h2>
 
         <div class="admin-current">
-          <p>
-            <span>전체목록</span>
-            참여자 수 00명
+          <p id="totalCount">
           </p>
         </div>
 
@@ -44,22 +42,21 @@
           <div class="form form-search">
             <select id="findSelect" name="" class="form-select">
               <option value="name">이름</option>
-              <option value="number">연락처</option>
+              <option value="hp">연락처</option>
               <option value="address">주소</option>
               <option value="url">리그램한 피드 URL</option>
-              <option value="agree">개인정보수집동의</option>
-              <option value="ip">ip</option>
-              <option value="date">응모날짜</option>
+              <option value="privacy">개인정보수집동의</option>
+              <option value="ip">IP</option>
             </select>
             <input id="findText" type="text" class="form-input" placeholder="검색어를 입력하세요." title="검색어 입력">
-            <button id="findBtn" type="button" class="btn btn-primary">검색</button>
-            <button id="findClear" type="button" class="btn btn-primary">초기화</button>
+            <button id="findBtn" type="button" class="btn btn-primary" style="cursor: pointer;">검색</button>
+            <button id="findClear" type="button" class="btn btn-primary" style="cursor: pointer;">초기화</button>
           </div>
         </div>
       </div>
 
       <div class="btn-wrap rt">
-        <button type="button" class="btn btn-excel">엑셀다운</button>
+        <button type="button" class="btn btn-excel" style="cursor: pointer;">엑셀다운</button>
       </div>
 
       <div class="contents-area">
@@ -67,9 +64,9 @@
           <table class="tb full">
             <thead>
             <tr>
-              <th class="tb-check">
+              <!-- <th class="tb-check">
                 <input type="checkbox" class="allCheck" title="전체선택">
-              </th>
+              </th> -->
               <th>이름</th>
               <th>연락처</th>
               <th>주소</th>
@@ -77,10 +74,11 @@
               <th>개인정보수집동의</th>
               <th>IP</th>
               <th>응모날짜</th>
+              <th>-</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <!-- <tr>
               <td><input type="checkbox" title=""></td>
               <td>홍길동</td>
               <td>010.0000.0000</td>
@@ -89,21 +87,20 @@
               <td>동의</td>
               <td>11.1111.1111.1</td>
               <td>2022.09.25</td>
-            </tr>
+            </tr> -->
             </tbody>
           </table>
         </div>
 
         <div class="btn-wrap ct">
-          <button type="button" id="prev" class="btn btn-arrow prev">이전</button>
+          <button type="button" id="prev" class="btn btn-arrow prev" style="cursor: pointer;">이전</button>
           <span id="pageNav" class="page-nav"></span>
-          <button type="button" id="next" class="btn btn-arrow next">다음</button>
+          <button type="button" id="next" class="btn btn-arrow next" style="cursor: pointer;">다음</button>
         </div>
 
-        <div class="btn-wrap">
-          <button type="button" class="btn btn-secondary">선택수정</button>
+        <!-- <div class="btn-wrap">
           <button type="button" class="btn btn-secondary">선택삭제</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

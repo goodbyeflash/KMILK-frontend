@@ -40,7 +40,7 @@ window.onload = () => {
   });
 
   sendButton.onclick = () => {
-    if (sendButton.getAttribute('loading') == "true") return;
+    if (sendButton.getAttribute('loading') == 'true') return;
 
     name = document.getElementById('name').value;
     phoneNumber = document.getElementById('phoneNumber').value;
@@ -89,7 +89,7 @@ window.onload = () => {
           alert('접수가 완료 되었습니다.');
         } else {
           if (res.result.response.data == 'Conflict') {
-            document.getElementById("popup04").className += " active";
+            document.getElementById('popup04').className += ' active';
           } else {
             alert('오류가 발생 하였습니다.');
           }
@@ -99,36 +99,37 @@ window.onload = () => {
     );
   };
 
-  document.getElementById("video01").onclick = () => {
-    window.open(
-      'http://www.google.com',
-      '_blank'
-    );
-    document.getElementById("popup03").className += " active";
+  document.getElementById('video01').onclick = () => {
+    window.open('http://www.google.com', '_blank');
+    document.getElementById('popup03').className += ' active';
   };
 
-  document.getElementById("video02").onclick = () => {
-    window.open(
-      'http://www.google.com',
-      '_blank'
-    );
-    document.getElementById("popup03").className += " active";
+  document.getElementById('video02').onclick = () => {
+    window.open('http://www.google.com', '_blank');
+    document.getElementById('popup03').className += ' active';
   };
 
-  document.getElementById("video03").onclick = () => {
-    window.open(
-      'http://www.google.com',
-      '_blank'
-    );
-    document.getElementById("popup03").className += " active";
+  document.getElementById('video03').onclick = () => {
+    window.open('http://www.google.com', '_blank');
+    document.getElementById('popup03').className += ' active';
   };
 
-  document.getElementById("regram").onclick = () => {
-    window.open(
-      'https://www.instagram.com/',
-      '_blank'
-    );
+  document.getElementById('regram').onclick = () => {
+    window.open('https://www.instagram.com/', '_blank');
   };
 
+  document.getElementById('copyUrl').onclick = () => {
+    const IE = document.all ? true : false;
+    const url = `https://kmilkevent.co.kr`;
+    if (IE) {
+      window.clipboardData.setData('Text', url);
+      alert('이 글의 단축url이 클립보드에 복사되었습니다.');
+    } else {
+      prompt(
+        '이 글의 단축 URL 입니다. 전체선택-복사하기(Ctrl+C)를 눌러 링크를 공유하세요',
+        url
+      );
+    }
+  };
   document.body.style.display = 'block';
 };

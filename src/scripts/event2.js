@@ -40,7 +40,7 @@ window.onload = () => {
   });
 
   sendButton.onclick = () => {
-    if (sendButton.getAttribute('loading') == "true") return;
+    if (sendButton.getAttribute('loading') == 'true') return;
 
     name = document.getElementById('name').value;
     phoneNumber = document.getElementById('phoneNumber').value;
@@ -75,7 +75,7 @@ window.onload = () => {
           alert('접수가 완료 되었습니다.');
         } else {
           if (res.result.response.data == 'Conflict') {
-            document.getElementById("popup02").className += " active";
+            document.getElementById('popup02').className += ' active';
           } else {
             alert('오류가 발생 하였습니다.');
           }
@@ -85,10 +85,9 @@ window.onload = () => {
     );
   };
 
-  document.getElementById("replay").onclick = () => {
-    document.getElementById("popup04").className = "popup";
+  document.getElementById('replay').onclick = () => {
+    document.getElementById('popup04').className = 'popup';
   };
-
 
   document.body.style.display = 'block';
 };
@@ -98,11 +97,11 @@ window.addEventListener('message', receiveMsgFromChild);
 
 // 자식으로부터 메시지 수신
 function receiveMsgFromChild(e) {
-  if(typeof(e.data) == "number") {
+  if (typeof e.data == 'number') {
     if (e.data == 6) {
-      document.getElementById("popup03").className += " active";
+      document.getElementById('popup03').className += ' active';
     } else {
-      document.getElementById("popup04").className += " active";
+      document.getElementById('popup04').className += ' active';
     }
   }
 }

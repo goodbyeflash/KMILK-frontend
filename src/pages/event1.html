@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=1080" />
+    <meta name="viewport" content="width=1080, user-scalable=no" />
     <meta property="og:url" content="https://kmilkevent.co.kr/">
     <meta property="og:title" content="2022 우유자조금관리위원회 온라인이벤트!">
     <meta property="og:type" content="website">
@@ -14,11 +14,11 @@
   <body style="display: none;">
     <div id="wrap" class="event1">
       <h1 class="hidden">K-MILK EVENT</h1>
-      <div class="tab-wrap">
+      <div class="tab-wrap" style="position: fixed;">
         <div class="inner">
           <ul>
             <li><img src="../asset/images/tab-01-on.jpg" alt="EVENT1 K-MILK 영상리그램"></li>
-            <li><img src="../asset/images/tab-02-off.jpg" alt="EVENT2 OX퀴즈 이벤트"></li>
+            <li><a href="./event2.html"><img src="../asset/images/tab-02-off.jpg" alt="EVENT2 OX퀴즈 이벤트"></a></li>
           </ul>
         </div>
       </div>
@@ -111,10 +111,10 @@
           </ul>
 
           <ul class="sns-list">
-            <li><img src="../asset/images/sns-kakao.png" alt="카카오톡"></li>
+            <!-- <li><img src="../asset/images/sns-kakao.png" alt="카카오톡"></li>
             <li><img src="../asset/images/sns-line.png" alt="라인"></li>
-            <li><img src="../asset/images/sns-facebook.png" alt="페이스북"></li>
-            <li><img src="../asset/images/sns-share.png" alt="공유하기"></li>
+            <li><img src="../asset/images/sns-facebook.png" alt="페이스북"></li> -->
+            <li><img id="copyUrl" style="cursor: pointer;" src="../asset/images/sns-share.png" alt="공유하기"></li>
           </ul>
         </div>
       </section>
