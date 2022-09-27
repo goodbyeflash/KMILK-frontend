@@ -216,8 +216,19 @@ header {
     }
 
     .form-input {
+      height: 33px;
       width: 300px;
+      padding: 5px;
+      margin: 0;
+      border: 1px solid #c9c9c9;
+      border-radius: 0;
+      font-size: 1.3rem;
+      line-height: 1;
+      background-color: transparent;
+      box-sizing: border-box;
+      vertical-align: middle;
     }
+    
   }
 
   &-group {

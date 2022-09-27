@@ -149,7 +149,7 @@ function onloadUserTable() {
                 <td>${item.name}</td>
                 <td>${item.hp}</td>
                 <td>${item.address}</td>
-                <td><a href='${item.url}'>${item.url}</a></td>
+                <td><a target="_blank" href='${item.url}'>${item.url}</a></td>
                 <td>${item.privacy}</td>
                 <td>${item.ip}</td>
                 <td>${new Date(item.publishedDate).YYYYMMDDHHMMSS()}</td>

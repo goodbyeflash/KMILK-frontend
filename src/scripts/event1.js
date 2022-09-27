@@ -131,5 +131,10 @@ window.onload = () => {
       );
     }
   };
+
+  api('GET', 'visitant', undefined, () => {});
+
+  api('GET', 'view', undefined, () => {});
+
   document.body.style.display = 'block';
 };

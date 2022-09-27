@@ -138,6 +138,16 @@ input[type='text'], input[type='password'], select, button {
       }
 
       input {
+        height: 33px;
+        padding: 5px;
+        margin: 0;
+        border: 1px solid #c9c9c9;
+        border-radius: 0;
+        font-size: 1.3rem;
+        line-height: 1;
+        background-color: transparent;
+        box-sizing: border-box;
+        vertical-align: middle;
         width: 78%
       }
 

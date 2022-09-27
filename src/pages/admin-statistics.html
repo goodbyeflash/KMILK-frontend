@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+  <title>관리자 페이지 | 통계</title>
+</head>
+<body style="display: none;">
+<div id="wrap">
+  <header>
+    <div class="header-top">
+      <h1>K-MILK 이벤트 관리자</h1>
+      <ul>
+        <li id="logout" style="cursor: pointer;"><a>로그아웃</a></li>
+      </ul>
+    </div>
+
+    <div class="gnb">
+      <nav>
+        <ul>
+          <li><a href="./admin-event1.html"><span class="dep01">이벤트1</span></a></li>
+          <li><a href="./admin-event2.html"><span class="dep01">이벤트2</span></a></li>
+          <li class="current"><span class="dep01">방문자 통계</span></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+
+    <div class="contents">
+
+      <div class="contents-top">
+        <h2>방문자 통계</h2>
+
+        <div class="admin-current">
+          <p id="today">
+          </p>
+        </div>
+
+        <div class="search">
+          <div class="form form-search">
+            <select id="yaerSelect" name="" class="form-select">
+              <option value="2022">2022</option>
+            </select>
+            년
+            <select id="monthSelect" name="" class="form-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            월
+            <button id="findBtn" type="button" class="btn btn-primary" style="cursor: pointer;">검색</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contents-area">
+        <div class="table">
+          <table class="tb full">
+            <thead>
+            <tr>
+              <th>날짜</th>
+              <th>방문자</th>
+              <th>페이지뷰</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- <tr>
+              <td><input type="checkbox" title=""></td>
+              <td>홍길동</td>
+              <td>010.0000.0000</td>
+              <td>동의</td>
+              <td>11.1111.1111.1</td>
+              <td>2022.09.25</td>
+            </tr> -->
+            </tbody>
+            <tr>
+              <th>합계</th>
+              <th id="totalVisitant">-</th>
+              <th id="totalView">-</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
