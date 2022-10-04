@@ -100,17 +100,23 @@ window.onload = () => {
   };
 
   document.getElementById('video01').onclick = () => {
-    window.open('http://www.google.com', '_blank');
+    const url = 'https://www.instagram.com/reel/CjSQYnRhoiv/?igshid=MDJmNzVkMjY=';
+    window.open(url, '_blank');
+    document.getElementById("instargramUrl").value = url;
     document.getElementById('popup03').className += ' active';
   };
 
   document.getElementById('video02').onclick = () => {
-    window.open('http://www.google.com', '_blank');
+    const url = 'https://www.instagram.com/reel/CjSQ7sBhEK0/?igshid=MDJmNzVkMjY=';
+    window.open(url, '_blank');
+    document.getElementById("instargramUrl").value = url;
     document.getElementById('popup03').className += ' active';
   };
 
   document.getElementById('video03').onclick = () => {
-    window.open('http://www.google.com', '_blank');
+    const url = 'https://www.instagram.com/reel/CjSVZ7cBzXC/?igshid=MDJmNzVkMjY=';
+    window.open(url, '_blank');
+    document.getElementById("instargramUrl").value = url;
     document.getElementById('popup03').className += ' active';
   };
 

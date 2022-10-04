@@ -104,8 +104,10 @@ function receiveMsgFromChild(e) {
   if (typeof e.data == 'number') {
     if (e.data == 6) {
       document.getElementById('popup03').className += ' active';
+      document.getElementById('correct').play();
     } else {
       document.getElementById('popup04').className += ' active';
+      document.getElementById('incorrect').play();
     }
   }
 }

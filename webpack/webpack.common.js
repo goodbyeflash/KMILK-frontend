@@ -3,7 +3,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const htmlPageNames = ['event1', 'event2', 'admin', 'admin-event1', 'admin-event2','admin-statistics'];
+const htmlPageNames = [
+  'event1',
+  'event2',
+  'admin',
+  'admin-event1',
+  'admin-event2',
+  'admin-statistics',
+];
 
 const multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
@@ -15,18 +22,21 @@ const multipleHtmlPlugins = htmlPageNames.map((name) => {
 
 module.exports = {
   entry: {
-    'main': Path.resolve(__dirname, '../src/scripts/index.js'),
-    'event1': Path.resolve(__dirname, '../src/scripts/event1.js'),
-    'event2': Path.resolve(__dirname, '../src/scripts/event2.js'),
-    'admin': Path.resolve(__dirname, '../src/scripts/admin.js'),
+    main: Path.resolve(__dirname, '../src/scripts/index.js'),
+    event1: Path.resolve(__dirname, '../src/scripts/event1.js'),
+    event2: Path.resolve(__dirname, '../src/scripts/event2.js'),
+    admin: Path.resolve(__dirname, '../src/scripts/admin.js'),
     'admin-event1': Path.resolve(__dirname, '../src/scripts/admin-event1.js'),
     'admin-event2': Path.resolve(__dirname, '../src/scripts/admin-event2.js'),
-    'admin-statistics': Path.resolve(__dirname, '../src/scripts/admin-statistics.js'),
+    'admin-statistics': Path.resolve(
+      __dirname,
+      '../src/scripts/admin-statistics.js'
+    ),
   },
   output: {
     path: Path.join(__dirname, '../build'),
     filename: 'js/[name].js',
-    assetModuleFilename : 'asset/images/[name].[ext]'
+    assetModuleFilename: 'asset/images/[name].[ext]',
   },
   optimization: {
     splitChunks: {
@@ -61,8 +71,8 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        type : 'asset/resource'
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp3)(\?.*)?$/,
+        type: 'asset/resource',
       },
     ],
   },
