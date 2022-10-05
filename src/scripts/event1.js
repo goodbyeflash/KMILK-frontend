@@ -4,6 +4,7 @@ import $ from 'jquery';
 import api from './lib/api';
 
 window.onload = () => {
+  let nowUrl;
   let name, phoneNumber, address, url, check1;
   const sendButton = document.getElementById('sendButton');
 
@@ -83,6 +84,7 @@ window.onload = () => {
         address: address,
         url: url,
         privacy: '동의',
+        publishedDate : new Date(),
       },
       (res) => {
         if (res.msg == 'OK') {
@@ -104,6 +106,7 @@ window.onload = () => {
     window.open(url, '_blank');
     document.getElementById("instargramUrl").value = url;
     document.getElementById('popup03').className += ' active';
+    nowUrl = url;
   };
 
   document.getElementById('video02').onclick = () => {
@@ -111,6 +114,7 @@ window.onload = () => {
     window.open(url, '_blank');
     document.getElementById("instargramUrl").value = url;
     document.getElementById('popup03').className += ' active';
+    nowUrl = url;
   };
 
   document.getElementById('video03').onclick = () => {
@@ -118,10 +122,11 @@ window.onload = () => {
     window.open(url, '_blank');
     document.getElementById("instargramUrl").value = url;
     document.getElementById('popup03').className += ' active';
+    nowUrl = url;
   };
 
   document.getElementById('regram').onclick = () => {
-    window.open('https://www.instagram.com/', '_blank');
+    window.open(nowUrl, '_blank');
   };
 
   document.getElementById('copyUrl').onclick = () => {

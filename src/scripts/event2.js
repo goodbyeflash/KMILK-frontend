@@ -69,6 +69,7 @@ window.onload = () => {
         name: name,
         hp: phoneNumber,
         privacy: '동의',
+        publishedDate : new Date(),
       },
       (res) => {
         if (res.msg == 'OK') {
