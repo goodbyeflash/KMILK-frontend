@@ -13,7 +13,12 @@ let columns = [
   { header: '리그램한 피드 URL', key: 'url', width: 50 },
   { header: '개인정보수집동의', key: 'privacy', width: 25 },
   { header: 'IP', key: 'ip', width: 25 },
-  { header: '응모날짜', key: 'publishedDate', width: 25 },
+  {
+    header: '응모날짜',
+    key: 'publishedDate',
+    width: 25,
+    style: { numFmt: 'yyyy/mm/dd hh:MM:ss' },
+  },
 ];
 const table = document
   .getElementsByClassName('table')[0]
@@ -45,8 +50,8 @@ window.onload = () => {
       };
 
       document.getElementById('findBtn').onclick = () => {
-        if( document.getElementById('findText').value.trim() == "" ) {
-          alert("검색어를 입력 해주세요.");
+        if (document.getElementById('findText').value.trim() == '') {
+          alert('검색어를 입력 해주세요.');
           return;
         }
         data = {};

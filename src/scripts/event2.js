@@ -56,6 +56,13 @@ window.onload = () => {
       return;
     }
 
+    let check = /^[0-9]+$/; 
+
+    if( !check.test(phoneNumber) ) {
+      alert('연락처는 숫자만 입력 해주세요.');
+      return;
+    }
+    
     if (!check1) {
       alert('개인 정보 수집 및 이용에 동의 해주세요.');
       return;
