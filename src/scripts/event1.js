@@ -16,6 +16,17 @@ window.onload = () => {
     $('.popup-contents').addClass('scale');
   }
 
+  $('#popup01').addClass('active');
+
+  $('#winning').on('click', function () {
+    window.open('https://imilk.or.kr/?milk-board-news=%eb%a7%9b%ec%9e%88%eb%8a%94-%ec%9a%b0%eb%a6%ac%ec%9a%b0%ec%9c%a0-%ec%98%81%ec%83%81%eb%a6%ac%ea%b7%b8%eb%9e%a8%ed%80%b4%ec%a6%88-event-%eb%8b%b9%ec%b2%a8%ec%9e%90-%eb%b0%9c%ed%91%9c');
+  });
+
+  $('.popup-close').on('click', function () {
+    $(this).closest('.popup').removeClass('active');
+    $('html, body').css('overflow', 'auto');
+  });
+
   if ($('.popup').hasClass('active')) {
     $('html, body').css('overflow', 'hidden');
   } else {
@@ -23,6 +34,8 @@ window.onload = () => {
   }
 
   $('.popup-open').on('click', function () {
+    alert('이벤트 기간이 종료되었습니다.');
+    return;
     let targetPop = $(this).attr('data-target');
     $('html, body').css('overflow', 'hidden');
     $(targetPop).addClass('active');
@@ -59,9 +72,9 @@ window.onload = () => {
       return;
     }
 
-    let check = /^[0-9]+$/; 
+    let check = /^[0-9]+$/;
 
-    if( !check.test(phoneNumber) ) {
+    if (!check.test(phoneNumber)) {
       alert('연락처는 숫자만 입력 해주세요.');
       return;
     }
@@ -91,7 +104,7 @@ window.onload = () => {
         address: address,
         url: url,
         privacy: '동의',
-        publishedDate : new Date(),
+        publishedDate: new Date(),
       },
       (res) => {
         if (res.msg == 'OK') {
@@ -109,25 +122,28 @@ window.onload = () => {
   };
 
   document.getElementById('video01').onclick = () => {
-    const url = 'https://www.instagram.com/reel/CjSQYnRhoiv/?igshid=MDJmNzVkMjY=';
+    const url =
+      'https://www.instagram.com/reel/CjSQYnRhoiv/?igshid=MDJmNzVkMjY=';
     window.open(url, '_blank');
-    document.getElementById("instargramUrl").value = url;
+    document.getElementById('instargramUrl').value = url;
     document.getElementById('popup03').className += ' active';
     nowUrl = url;
   };
 
   document.getElementById('video02').onclick = () => {
-    const url = 'https://www.instagram.com/reel/CjSQ7sBhEK0/?igshid=MDJmNzVkMjY=';
+    const url =
+      'https://www.instagram.com/reel/CjSQ7sBhEK0/?igshid=MDJmNzVkMjY=';
     window.open(url, '_blank');
-    document.getElementById("instargramUrl").value = url;
+    document.getElementById('instargramUrl').value = url;
     document.getElementById('popup03').className += ' active';
     nowUrl = url;
   };
 
   document.getElementById('video03').onclick = () => {
-    const url = 'https://www.instagram.com/reel/CjSVZ7cBzXC/?igshid=MDJmNzVkMjY=';
+    const url =
+      'https://www.instagram.com/reel/CjSVZ7cBzXC/?igshid=MDJmNzVkMjY=';
     window.open(url, '_blank');
-    document.getElementById("instargramUrl").value = url;
+    document.getElementById('instargramUrl').value = url;
     document.getElementById('popup03').className += ' active';
     nowUrl = url;
   };

@@ -15,6 +15,12 @@ window.onload = () => {
     $('.popup-contents').addClass('scale');
   }
 
+  $('#popup01').addClass('active');
+
+  $('#winning').on('click', function () {
+    window.open('https://imilk.or.kr/?milk-board-news=%eb%a7%9b%ec%9e%88%eb%8a%94-%ec%9a%b0%eb%a6%ac%ec%9a%b0%ec%9c%a0-%ec%98%81%ec%83%81%eb%a6%ac%ea%b7%b8%eb%9e%a8%ed%80%b4%ec%a6%88-event-%eb%8b%b9%ec%b2%a8%ec%9e%90-%eb%b0%9c%ed%91%9c');
+  });
+  
   if ($('.popup').hasClass('active')) {
     $('html, body').css('overflow', 'hidden');
   } else {
@@ -56,13 +62,13 @@ window.onload = () => {
       return;
     }
 
-    let check = /^[0-9]+$/; 
+    let check = /^[0-9]+$/;
 
-    if( !check.test(phoneNumber) ) {
+    if (!check.test(phoneNumber)) {
       alert('연락처는 숫자만 입력 해주세요.');
       return;
     }
-    
+
     if (!check1) {
       alert('개인 정보 수집 및 이용에 동의 해주세요.');
       return;
@@ -76,7 +82,7 @@ window.onload = () => {
         name: name,
         hp: phoneNumber,
         privacy: '동의',
-        publishedDate : new Date(),
+        publishedDate: new Date(),
       },
       (res) => {
         if (res.msg == 'OK') {
@@ -110,6 +116,8 @@ window.addEventListener('message', receiveMsgFromChild);
 // 자식으로부터 메시지 수신
 function receiveMsgFromChild(e) {
   if (typeof e.data == 'number') {
+    alert('이벤트 기간이 종료되었습니다.');
+    return;
     if (e.data == 6) {
       document.getElementById('popup03').className += ' active';
       document.getElementById('correct').play();
